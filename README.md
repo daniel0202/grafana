@@ -20,6 +20,13 @@ Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
 - [What's New in Grafana 4.0 Beta](http://docs.grafana.org/guides/whats-new-in-v4/)
 
 ## Features
+### 添加CAS登录支持
+配置
+```
+[auth.cas]
+enabled =  
+server_url = <cas_server_url>
+```
 ### Graphite Target Editor
 - Graphite target expression parser
 - Feature rich query composer
