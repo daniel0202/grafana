@@ -19,6 +19,11 @@ const (
 )
 
 func LoginView(c *middleware.Context) {
+	// cas login suport
+	if setting.AuthCasEnabled {
+		login.CasLogin(c)
+		return
+	}
 	viewData, err := setIndexViewData(c)
 	if err != nil {
 		c.Handle(500, "Failed to get settings", err)
@@ -143,5 +148,10 @@ func Logout(c *middleware.Context) {
 	c.SetCookie(setting.CookieUserName, "", -1, setting.AppSubUrl+"/")
 	c.SetCookie(setting.CookieRememberName, "", -1, setting.AppSubUrl+"/")
 	c.Session.Destory(c)
+	if setting.AuthCasEnabled {
+		service := login.GetService()
+		c.Redirect(setting.AuthCasServerUrl + "/logout?service=" + setting.AuthCasServerUrl + "/?service=" + service)
+		return
+	}
 	c.Redirect(setting.AppSubUrl + "/login")
 }

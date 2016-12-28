@@ -315,6 +315,30 @@
 			"versionExact": "v1.21.1"
 		},
 		{
+			"checksumSHA1": "+VAgf8rvRqmCBe5R1S2NCN5hotU=",
+			"path": "github.com/lucasuyezu/golang-cas-client",
+			"revision": "546569006c117b2f553f5a7ec0b4fe41f3dddc05",
+			"revisionTime": "2015-05-07T03:46:59Z"
+		},
+		{
+			"checksumSHA1": "5UIsDy9TvCUFTdgOw/GjVmANsd4=",
+			"path": "github.com/lucasuyezu/golang-cas-client/client",
+			"revision": "546569006c117b2f553f5a7ec0b4fe41f3dddc05",
+			"revisionTime": "2015-05-07T03:46:59Z"
+		},
+		{
+			"checksumSHA1": "YSljOxSebsxXvw79wJqDK6Jh7cE=",
+			"path": "github.com/lucasuyezu/golang-cas-client/service",
+			"revision": "546569006c117b2f553f5a7ec0b4fe41f3dddc05",
+			"revisionTime": "2015-05-07T03:46:59Z"
+		},
+		{
+			"checksumSHA1": "zYkOiGtVtGAo4pARcXOc0lj3keY=",
+			"path": "github.com/lucasuyezu/golang-cas-client/util",
+			"revision": "546569006c117b2f553f5a7ec0b4fe41f3dddc05",
+			"revisionTime": "2015-05-07T03:46:59Z"
+		},
+		{
 			"checksumSHA1": "SMUvX2B8eoFd9wnPofwBKlN6btE=",
 			"path": "github.com/prometheus/client_golang/api/prometheus",
 			"revision": "5636dc67ae776adf5590da7349e70fbb9559972d",

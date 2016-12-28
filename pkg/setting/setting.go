@@ -139,6 +139,10 @@ var (
 	LdapConfigFile  string
 	LdapAllowSignup bool = true
 
+	// Auth CAS settings
+	AuthCasEnabled   bool
+	AuthCasServerUrl string
+
 	// SMTP email settings
 	Smtp SmtpSettings
 
@@ -525,6 +529,11 @@ func NewConfigContext(args *CommandLineArgs) error {
 	// auth
 	auth := Cfg.Section("auth")
 	DisableLoginForm = auth.Key("disable_login_form").MustBool(false)
+
+	// auth cas
+	authCas := Cfg.Section("auth.cas")
+	AuthCasEnabled = authCas.Key("enabled").MustBool(false)
+	AuthCasServerUrl = authCas.Key("server_url").String()
 
 	// anonymous access
 	AnonymousEnabled = Cfg.Section("auth.anonymous").Key("enabled").MustBool(false)
